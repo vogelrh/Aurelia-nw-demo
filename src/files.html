@@ -1,0 +1,17 @@
+<template>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+    <div>${home}</div>
+    </div>
+    <div class="panel-body">
+      <div class="col-sm-6 col-md-3 card-container au-animate"  repeat.for="file of files">
+        <div class="fileObj">
+          <img src.bind="file.icon" />
+        </div>
+        <div class="fileName">
+          <p class="name">${file.displayName}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
