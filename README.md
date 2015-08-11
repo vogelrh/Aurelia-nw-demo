@@ -1,4 +1,49 @@
-# aurelia-skeleton-navigation
+# aurelia-nw-demo
+
+This skeleton project takes the [aurelia-skeleton-navigation v0.16.2](https://github.com/aurelia/skeleton-navigation/releases) framework and converts it
+to a desktop application that can run on OSX, Windows or Linux using [NW.js](http://nwjs.io/). It is more of a proof of concept project than a full blown
+project template. It implements the original aurelia framework functionality and adds the beginnings of a local file explorer page and also demonstrates
+the use of a local non-sql database using [TingoDB](http://www.tingodb.com/) and [Mongoose](http://mongoosejs.com/).
+
+## NOTE:
+
+1. The local db feature is not implemented yet.
+2. The testing portion of the framework has not been integrated property with NW.js
+
+## Running The App
+
+To run the app, follow these steps.
+
+1. Ensure that [NodeJS](http://nodejs.org/) is installed. This provides the platform on which the build tooling runs.
+2. From the project folder, execute the following command:
+
+  ```shell
+  npm install
+  ```
+3. Ensure that [Gulp](http://gulpjs.com/) is installed. If you need to install it, use the following command:
+
+  ```shell
+  npm install -g gulp
+  ```
+4. Ensure that [jspm](http://jspm.io/) is installed. If you need to install it, use the following command:
+
+  ```shell
+  npm install -g jspm
+  ```
+  > **Note:** jspm queries GitHub to install semver packages, but GitHub has a rate limit on anonymous API requests. It is advised that you configure jspm with your GitHub credentials in order to avoid problems. You can do this by executing `jspm registry config github` and following the prompts.
+5. Install the client-side dependencies with jspm:
+
+  ```shell
+  jspm install -y
+  ```
+  >**Note:** Windows users, if you experience an error of "unknown command unzip" you can solve this problem by doing `npm install -g unzip` and then re-running `jspm install`.
+6. To run the app, execute the following command:
+
+  ```shell
+  gulp run
+  ```
+
+# The Original Aurelia Skeleton ReadMe File
 
 [![ZenHub](https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png)](https://zenhub.io)
 [![Join the chat at https://gitter.im/aurelia/discuss](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/aurelia/discuss?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
