@@ -141,6 +141,14 @@ div.au-stagger {
   border: 2px #FFF solid;
 }
 
+.curDir {
+  color: white;
+  background: rgba(0,0,0,0.2);
+  padding: 0.5em 1em;
+  min-width: 10em;
+  border-radius: 0.2em;
+  margin: 1em;
+}
 
 /* animation definitions */
 @-webkit-keyframes fadeInRight {

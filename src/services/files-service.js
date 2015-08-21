@@ -61,7 +61,7 @@ export class FileService {
                 eix = f.lastIndexOf('.'),
                 fpre = f,
                 fpost = '',
-                result = null;
+                result;
 
             if (eix !== -1 && stat.isFile()) {
               fpost = fpre.substring(eix);
@@ -75,8 +75,9 @@ export class FileService {
               displayName: fpre + fpost,
               path: fpath,
               icon: (stat.isFile() ? './src/images/file.png' : stat.isDirectory() ? './src/images/folder.png' : ''),
-              type: (stat.isFile() ? 'file' : stat.isDirectory() ? 'directory' : '')
-            }
+              isFile: stat.isFile(),
+              isDirectory: stat.isDirectory()
+            };
             fObjs.push(result);
           });
         }

@@ -9,11 +9,27 @@ export class Files{
 
   constructor (fileService) {
     this.fileService = fileService;
-    this.home = fileService.getHomeFolder();
+    this.curDir = fileService.getHomeFolder();
+    this.files = [];
   }
 
   activate() {
-    this.fileService.getFilesInFolder(this.home).then(files => this.files = files, err => console.log(err));
+    this.fileService.getFilesInFolder(this.curDir).then(files => {
+      this.files = files;
+      console.log(this.files.length);
+    }, err => console.log(err));
   }
 
+  itemClicked(item) {
+    if (item) {
+      if (item.isDirectory) {
+        this.files = [];
+        this.curDir = item.path;
+        this.fileService.getFilesInFolder(this.curDir).then(files => {
+          this.files = files;
+          console.log(this.files.length);
+        }, err => console.log(err));
+      }
+    }
+  }
 }

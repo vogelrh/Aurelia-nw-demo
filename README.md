@@ -2,8 +2,9 @@
 
 This skeleton project takes the [aurelia-skeleton-navigation v0.16.2](https://github.com/aurelia/skeleton-navigation/releases) framework and converts it
 to a desktop application that can run on OSX, Windows or Linux using [NW.js](http://nwjs.io/). It is more of a proof of concept project than a full blown
-project template. It implements the original aurelia framework functionality and adds the beginnings of a local file explorer page and also demonstrates
-the use of a local non-sql database using [TingoDB](http://www.tingodb.com/) and [Mongoose](http://mongoosejs.com/).
+project template. It implements the original aurelia framework functionality and adds the beginnings of a local file explorer page and will also demonstrate
+the use of a local non-sql database using [TingoDB](http://www.tingodb.com/) and [Mongoose](http://mongoosejs.com/). This is very much a work-in-progress.
+There are a number of modifications to the develop and production-build workflow that needs to be worked out.
 
 ## NOTE:
 
